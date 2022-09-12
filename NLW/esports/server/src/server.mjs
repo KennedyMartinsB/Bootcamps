@@ -4,8 +4,16 @@ const app = express()
 
 
 // Primeiro parametro do get pega o que quero que seja listado
-app.get('/ads', () => {
-    console.log("Acessou Ads");
+app.get('/ads', (request, response) => {
+    // console.log("Acessou Ads");
+    // Como na estrutura de projeto o back end trará um json como response
+    // Devemos trocar o .send por .json e retornar um array
+    return response.json([
+        {id:1, name:'anuncio 1'},
+        {id:2, name:'anuncio 2'},
+        {id:3, name:'anuncio 3'},
+        
+    ])
 })
 
 
