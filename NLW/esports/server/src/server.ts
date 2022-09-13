@@ -17,3 +17,6 @@ app.get('/ads', (request, response) => {
 // Listen faz com que a aplicação fique recebendo novas requisições
 // E só pare quando o usuário pedir 
 app.listen(3333)
+
+// npm i ts-node-dev
+// Serve para converter o codigo ts em js
